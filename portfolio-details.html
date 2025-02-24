@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - DevFolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <h1 class="sitename">SH</h1> -->
+        <img src="assets/img/mylogo.png" alt="logo" class="sitename">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div id="swiper-wrapper" class="swiper-wrapper align-items-center"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2 id="project-description-title"></h2>
+              <p id="project-description"></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul id="project-info-list"></ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <script>
+    // Array of project data
+    const projects = [
+      {
+        id: 1,
+        title: "E-Ride",
+        images: [
+          "assets/img/screens/eride/eride-1.png",
+          "assets/img/screens/eride/eride-2.png",
+          "assets/img/screens/eride/eride-3.png",
+          "assets/img/screens/eride/eride-4.png",
+        ],
+        description: `E-Ride is a micro-mobility service in Jordan, providing eco-friendly and convenient transportation options for urban commuters. Our fleet of electric scooters and bicycles offers a sustainable and cost-effective alternative to traditional modes of transportation in Jordan's cities. With a focus on safety and reliability, E-Ride is the perfect choice for modern urban transportation in Jordan.
+          Key features include:
+          - Fleet Management and Maintenance
+          - Marketing and Advertising
+          - Micro-Mobility Travel Solutions
+          - Language Translation
+
+          Technical Stack used:
+          - Angular 14
+          - Angular Material
+          - Reactive Programming (RxJs)
+          - Tailwind CSS
+          - Agm Maps`,
+        category: "Web Design & Development",
+        projectUrl: "https://eridejo.com/dashboard",
+      },
+      {
+        id: 2,
+        title: "MyDay Admin Portal",
+        images: [
+          "assets/img/screens/myday/myday-1.png",
+          "assets/img/screens/myday/myday-2.png",
+          "assets/img/screens/myday/myday-3.png",
+          "assets/img/screens/myday/myday-4.png",
+        ],
+        description: `
+          A comprehensive web application designed to manage various aspects of the MyDay platform, including:
+          - Admin Management: Tools and features for efficient admin operations.
+          - Company Management: Managing company-specific data and user access.
+          - Analytics: Visualizing data insights using dynamic charts and reports.
+          - MyDay User Features: Overseeing and managing user activities and data.
+
+          Technical Stack:
+          - React.js: Building reusable and efficient components.
+          - Redux: Managing global state for seamless application performance.
+          - React Router: Enabling smooth navigation and routing between modules.
+          - Formik: Simplifying form handling and validation.
+          - Chart.js: Creating interactive and visually appealing data visualizations.
+  `,
+        category: "Dashboard Design & Development",
+        projectUrl: "https://admin.myday.codesorbit.net/sign-in",
+      },
+      {
+        id: 3,
+        title: "Forsit",
+        images: [
+          "assets/img/screens/forsit/forist-0.png",
+          "assets/img/screens/forsit/forist-1.png",
+          "assets/img/screens/forsit/forist-2.png",
+          "assets/img/screens/forsit/forist-3.png",
+        ],
+        description: `
+          A comprehensive web application designed to manage various aspects of the MyDay platform, including:
+          - Admin Management: Tools and features for efficient admin operations.
+          - Company Management: Managing company-specific data and user access.
+          - Analytics: Visualizing data insights using dynamic charts and reports.
+          - MyDay User Features: Overseeing and managing user activities and data.
+
+          Technical Stack:
+          - React.js: Building reusable and efficient components.
+          - Redux: Managing global state for seamless application performance.
+          - React Router: Enabling smooth navigation and routing between modules.
+          - Formik: Simplifying form handling and validation.
+          - Chart.js: Creating interactive and visually appealing data visualizations.
+  `,
+        category: "Dashboard Design & Development",
+        projectUrl: "https://admin.myday.codesorbit.net/sign-in",
+      },
+
+    ];
+
+    // Get project ID from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = parseInt(urlParams.get("id"));
+    // Find the project by ID
+    const project = projects.find((proj) => proj.id == projectId);
+
+    // If project exists, populate the details
+    if (project) {
+      document.getElementById("project-description-title").textContent = project.title;
+
+      // Populate swiper images
+      const swiperWrapper = document.getElementById("swiper-wrapper");
+      project.images.forEach((image) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+        slide.innerHTML = `<img src="${image}" alt="${project.title}">`;
+        swiperWrapper.appendChild(slide);
+      });
+
+      // Populate project description
+      document.getElementById("project-description-title").textContent = project.title;
+      document.getElementById("project-description").innerHTML = project.description.replace(/\n/g, "<br>");
+
+      // Populate project info
+      const infoList = document.getElementById("project-info-list");
+      infoList.innerHTML = `
+        <li><strong>Category:</strong> ${project.category}</li>
+        <li><strong>Project URL:</strong> <a href="${project.projectUrl}" target="_blank">${project.projectUrl}</a></li>
+        <li><a href="${project.projectUrl}" target="_blank" class="btn-visit align-self-start">Visit Website</a></li>
+      `;
+    } else {
+      document.querySelector(".portfolio-description").innerHTML = "<p>Project not found.</p>";
+    }
+  </script>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="sitename">SherazHussain</strong> <span>.All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/sherazhussain" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/sheraz.hussain.965580" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/sheraz-hussain-engineer/" target="_blank"><i
+            class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
